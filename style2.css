@@ -1,0 +1,261 @@
+body {
+  background:black; 
+  margin: 0;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.tabs {
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px; 
+  z-index: 1000;
+}
+
+.tabs button {
+    background: none;
+    border: none;
+    color: white; 
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left; 
+    padding: 6px 10px;
+    transition: color 0.3s ease;
+}
+
+.tabs button:hover {
+    color: rgb(211,1,1);
+}
+
+.tabs button.active {
+   color: rgb(211, 1, 1);
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 450px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.navigation li a { 
+    display: block; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none;
+    padding: 20px; 
+    transition: all 0.5s ease-in-out;
+    animation-duration: 0.9s;
+}
+
+.navigation li a:hover {
+  color: #ff0000;
+  animation-name: pulse79;
+  animation-iteration-count: infinite;
+}
+
+.recommendations {
+  font-family: Helvetica;
+  font-weight: bold; 
+  color: white;
+  flex-direction: column;
+  padding:10px;
+}
+
+.split-container {
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.split-container.active {
+  display: flex;
+}
+
+.split {
+  width: 50%;
+  height: 100%;
+}
+
+.split.left {
+  background: #000000;
+}
+
+.split.right {
+  background: #000;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+.split.right .centered {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+}
+
+.split.left .centered {
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0px; /* controls how far down everything starts */
+  margin-left:150px;
+}
+
+.centered {
+  color: white;
+  font-family: Helvetica;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:8px;
+}
+
+.square-box {
+    width: 200px;
+    height: 200px;
+    background-color:rgb(211, 1, 1);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-weight: bold;
+    margin-left:10px;
+    transition: all 0.5s ease-in-out;
+    animation-duration: 0.9s;
+    flex-direction: column;
+    margin-bottom:40px;
+    flex-shrink:0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    animation-duration: 0.9s;
+}
+
+a:hover {
+    color: rgb(211, 1, 1);
+    animation-name: pulse79;
+    animation-iteration-count: infinite;
+}
+
+.split-right{
+    min-width: 300px;
+    height: 100vh;
+    overflow-y:auto;
+    overflow-x: hidden;
+    gap: 10px;
+}
+
+.split.right .centered {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:flex-start;
+  height: auto;
+  min-height: 100%;
+}
+
+.split.right h2 {
+  margin-bottom: 6px;
+}
+
+.split.right h4 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.location {
+    font-weight: bold;
+    animation: location 3s;
+    color: rgb(211, 1, 1);
+    opacity:1;
+    transition: opacity 1.0s ease-in-out;
+
+}
+
+.location:hover{
+  opacity: 0;
+}
+
+@keyframes location {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+h3 {
+  font-size:15px;
+  text-align: left;
+  margin-right: 60px;
+}
+
+p { 
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight:bold;    
+    color:white;
+    line-height: 1.5;
+    max-width: 500px; /* restricts paragraph width */
+    margin: 6px 0; /* centers paragraph horizontally */
+    text-align:left;
+}
+
+.audio-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top:200px;
+}
+
+.playPause {
+  transform: translateX(-130px);
+  background-image: url(images/play.png);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.playPause img {
+  width: 30px;   /* adjust as needed */
+  height: 30px;
+  transition: all 0.5s ease-in-out;
+}
+
+.playPause:hover {
+   animation-name: pulse79;
+   animation-iteration-count: infinite;
+}
+
+.split-container:not(#fajr) .split.left .centered {
+  margin-left: 200px;
+}
+
+.instruct {
+  font-family: Helvetica;
+  font-weight: bold;
+  color:rgb(211, 1, 1);
+  margin-top: 25px;
+  margin-bottom: 5px;
+
+}

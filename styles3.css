@@ -1,0 +1,157 @@
+body {
+  background: url("../images/about.png") no-repeat center center fixed;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 450px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.navigation li a { 
+    display: block; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none;
+    padding: 20px; 
+    transition: all 0.5s ease-in-out;
+    animation-duration: 0.9s;
+}
+
+.navigation li a:hover {
+  color: #ff0000;
+  animation-name: pulse79;
+  animation-iteration-count: infinite;
+}
+
+h2 {
+  color: white;
+  font-family: Helvetica;
+  font-size: 75px;
+  text-align: left;
+  margin-left:100px;
+}
+
+h3 {
+  color: white;
+  font-family: Helvetica;
+  font-size: 75px;
+  text-align: left;
+  margin-left:100px;
+}
+
+
+body {
+  background: url("../images/about.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 450px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.navigation li a { 
+    display: block; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none;
+    padding: 20px; 
+    transition: all 0.5s ease-in-out;
+    animation-duration: 0.9s;
+}
+
+.navigation li a:hover {
+  color: #ff0000;
+  animation-name: pulse79;
+  animation-iteration-count: infinite;
+}
+
+h2 {
+  color: white;
+  font-family: Helvetica;
+  font-size: 75px;
+  text-align: left;
+  margin-left:100px;
+}
+
+h3 {
+  margin-left: auto;
+  margin-right: 100px; /* space from right edge */
+  text-align: right;   /* makes the text align nicely */
+  color: white;
+  font-family: Helvetica;
+  font-size: 75px;
+}
+
+.summary {
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+  margin-left: 100px;
+  max-width: 455px;
+  font-size: 29px;
+}
+
+.thanks {
+  font-family: Helvetica;
+  font-weight: bold;
+  margin-left: 100px;
+  max-width: 700px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 100px;
+  margin-bottom: 200px;
+  font-size: 17px;
+  color: white; /* 0.8 = 80% opacity */
+
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    display: block;
+    margin: 0px auto 0; /* top, left/right, bottom */
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 350px;
+    height: 60px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    color:rgb(0, 0, 0);
+}
+
+button:hover {
+    animation: pulse79 0.8s ease-in-out infinite;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+      animation: pulse79 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse79 {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
