@@ -49,7 +49,7 @@ h3 {
 
 
 body {
-  background: url("../images/about.png") no-repeat center center fixed;
+  background: url("images/about.png") no-repeat center center fixed;
   background-size: cover;
 }
 
