@@ -11,35 +11,35 @@ body {
   animation: slideshow 30s infinite;
 }
 
-@keyframes slideshow {
- 0% {
-    background-image: url("images/image1.png");
-  }
-  12% {
-    background-image: url("images/image2.png");
-  }
-  24% {
-    background-image: url("/images/image3.png");
-  }
-  36% {
-    background-image: url("images/image4.png");
-  }
-  48% {
-    background-image: url("images/image5.png");
-  }
-  60% {
-    background-image: url("images/image6.png");
-  }
-  72% {
-    background-image: url("images/image7.png");
-  }
-  84% {
-    background-image: url("images/image8.png");
-  }
-  100% {
-    background-image: url("images/image9.png");
-  }
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100vh;
+  z-index:-1;
+  overflow: hidden;
 }
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+.slide:nth-child(1){ animation-delay: 0s; }
+.slide:nth-child(2){ animation-delay: 4s; }
+.slide:nth-child(3){ animation-delay: 8s; }
+
+@keyframes fade{
+0%,33% {opacity:1};
+34%,100%{opacity:0};
+}
+
 
 h1,h2,h4 {
  
