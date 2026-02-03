@@ -242,5 +242,18 @@ a:hover {
     padding:5px 0;
     text-decoration: none;
   }
+
+  .first, .third, .red{
+    display: inline-block;
+    margin-left:3px;
+    margin-right:3px;
+    font-size: 18px;
+  }
+
+  h1,h2,h4 {
+    margin-top: 20px;
+    margin-bottom:10px;
+    text-align:center;
+  }
 }
 
