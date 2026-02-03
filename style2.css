@@ -234,6 +234,7 @@ p {
   border: none;
   cursor: pointer;
   padding: 0;
+  padding-top:5px;
 }
 
 .playPause img {
@@ -306,6 +307,11 @@ p {
   audio-block{
     margin-top:100px;
     gap:8px;
+  }
+
+  .playPause{
+    padding-top:5px;
+    position:fixed;
   }
 
 
