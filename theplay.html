@@ -51,6 +51,7 @@
   <p>FAJR: <a href="https://share.google/mKggfaBH4LgL41TqU">CHURCH OF ST. FRANCIS XAVIER</a></p>
   <p>DHUHR: <a href="https://share.google/YcbPhwXxBCZs5eQn9">NEWKIRK PLAZA & CORTELYOU</a></p>
   <p>ISHA: <a href="https://maps.app.goo.gl/rnuHzS23mqjKpmth7">CHURCH OF ST. THOMAS AQUINAS</a></p>
+  <button class="next-act">NEXT</button>
     </div>
   </div>
 </div>
@@ -97,7 +98,7 @@
     </div>
     <h3>ABOUT THE CHURCH OF ST. FRANCIS XAVIER:</h3>
     <p>As you take in the baroque architecture and the church’s forty-seven colourful murals, notice the recurring theme of the lily: the historic symbol of Christ’s resurrection and, in flower symbolism, purity and rebirth. The church recently undertook a multi-million-dollar restoration project to preserve its stained-glass and wooden windows.</p>
-    
+    <button class="next-act">NEXT</button>
   </div>
 </div>
 </div>
@@ -143,6 +144,7 @@
       <li><a href="https://share.google/6IGlfix1VPy2UXyvv">Bad Therapy</a></li>
       <li><a href="https://share.google/uZ8H6uHcx18uKPj7r">Ayat - Ditmas Park</a></li>
     </ul>
+     <button class="next-act">NEXT</button>
     </div>
   </div>
 </div>
@@ -178,6 +180,7 @@
       <h4>RICHIE</h4>
       <div class=location>NO LOCATION FOUND</div>
     </div>
+     <button class="next-act">NEXT</button>
   </div>
 </div>
 
@@ -212,6 +215,7 @@
       <h4>RICHIE</h4>
       <div class=location>NO LOCATION FOUND</div>
     </div>
+     <button class="next-act">NEXT</button>
   </div>
 </div>
 
@@ -252,11 +256,13 @@
       <li><a href="https://share.google/dyXysniw9f1dQ3S9Y">Frida</a></li>
       <li><a href="https://share.google/Zp52T36H33DT3GoII">Beyond Bagels</a></li>
     </ul>
+     <button class="next-act">NEXT</button>
     </div>
   </div>
 </div>
 
 <script>
+
   // === Tab switching logic ===
   const buttons = document.querySelectorAll("button[data-target]");
   const splits = document.querySelectorAll(".split-container");
@@ -278,6 +284,17 @@
       button.classList.add("active");
     });
   });
+
+const intro = document.getElementById("intro");
+const introTab = document.querySelector('.tabs button[data-target="intro"]');
+
+if (intro) {
+  intro.classList.add("active");
+}
+
+if (introTab) {
+  introTab.classList.add("active");
+}
 
   // === Play/Pause with image toggle ===
   document.querySelectorAll(".audio-block").forEach(block => {
@@ -305,6 +322,7 @@
       }
     });
   });
+
 </script>
 
 </body>

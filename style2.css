@@ -1,8 +1,9 @@
 body {
-  background:black; 
+  background: black;
   margin: 0;
-  overflow: hidden;
   padding-bottom: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .tabs {
@@ -78,8 +79,8 @@ body {
   height: 100vh;
 }
 
-.split-container.active {
-  display: flex;
+.split-container.active{
+  display:flex;
 }
 
 .split {
@@ -224,7 +225,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  margin-top:200px;
+  margin-top:80px;
 }
 
 .playPause {
@@ -234,7 +235,7 @@ p {
   border: none;
   cursor: pointer;
   padding: 0;
-  padding-top:5px;
+  padding-top:125px;
 }
 
 .playPause img {
@@ -261,58 +262,96 @@ p {
 
 }
 
-@media screen and (max-width:1000px){
+.next-act{
+  background-color: rgb(211, 1, 1);
+  color:white;
+    border: none;
+    display: block;
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: bold;
+    border-radius: 14px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    text-align:center;
+    align-items: center;
+    margin-left:200px;
+    margin-top:20px;
+}
+
+.next-act li a{
+  transition: all 0.5s ease-in-out;
+  animation-duration: 0.9s;
+}
+.next-act:hover{
+animation: pulse79 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse79{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+
+@media screen and (max-width: 1000px){
+
   .navigation{
     flex-direction: row;
     align-items:center;
     gap:10px;
     padding:10px 0;
   }
-  .navigation li a{
-    padding: 12px 20px;
-    font-size:18px;
-  }
-
+  /*kill split on desktop*/
   .split-container{
-    flex-direction: row !important;
-    height:100vh;
-    overflow:hidden;
-  }
-
-  .split{
-    width: 100% !important;
+    flex-direction: column;
     height:auto;
+    width:100%;
+    display:none; /*hide all by default*/
   }
 
-  .split.left .centered{
-    margin-left:0;
+  .split-container.active{
+    display:flex;
+  }
+
+  .split {
+    width:100%;
+    height:auto; /*splits it vertically*/
+  }
+
+  .split.right{
+    order:2;
+  }
+  .split.left{
+    order:1;
+  }
+
+#fajr .split.left .centered {
+  align-items:flex-start;
+}
+
+  #fajr .split.left .centered {
+    align-items: flex-start; /* push to left */
+    margin-left: 20px; /* adjust horizontal spacing */
+    margin-right: 0;   /* remove the huge margin */
+  }
+
+  .split .centered{
     padding:20px;
-    align-items: center;
-  }
-
-  .split.right .centered{
-    padding: 20px;
-    align-items:flex-start;
-    min-height:auto;
+    justify-content:flex-start;
+    gap:16px;
   }
 
   .square-box{
-    width:200px;
-    height:200px;
-    margin-left:0;
-    margin-bottom:20px;
-    font-size:14px;
+    margin:0;
   }
 
-  audio-block{
-    margin-top:100px;
-    gap:8px;
+  .audio-block{
+    margin-top:20px;
   }
 
-  .playPause{
-    padding-top:5px;
-    position:fixed;
+    .tabs {
+    display: none; /* don't display on mobile*/
   }
-
-
 }
