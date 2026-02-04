@@ -339,7 +339,7 @@ animation: pulse79 0.8s ease-in-out infinite;
 
   .split .centered{
     padding:20px;
-    justify-content:flex-start;
+    align-content:center;
     gap:16px;
   }
 
@@ -353,5 +353,9 @@ animation: pulse79 0.8s ease-in-out infinite;
 
     .tabs {
     display: none; /* don't display on mobile*/
+  }
+
+  .playPause{
+    margin-top:100px;
   }
 }
