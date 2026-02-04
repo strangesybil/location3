@@ -274,9 +274,7 @@ p {
     width: 120px;
     height: 30px;
     cursor: pointer;
-    text-align:center;
-    align-items: center;
-    margin-left:200px;
+    text-align:flex-start;
     margin-top:20px;
 }
 
@@ -343,13 +341,10 @@ animation: pulse79 0.8s ease-in-out infinite;
     gap:16px;
   }
 
-  .square-box{
-    margin:0;
-  }
-
-  .audio-block{
-    margin-top:20px;
-  }
+  .split-container .split.left .centered .audio-block {
+    align-items: flex-start; /* push everything to the left */
+    margin-left: 0; /* reset any previous left margin */
+}
 
     .tabs {
     display: none; /* don't display on mobile*/
@@ -358,4 +353,24 @@ animation: pulse79 0.8s ease-in-out infinite;
   .playPause{
     margin-top:100px;
   }
+
+  .next-act{
+  margin-right: auto; /* optional padding from edge */
+  margin-left:150px;
+  display: block; 
+}
+
+#maghrib .next-act {
+        margin-right: auto; /* optional padding from edge */
+        margin-left:180px;
+        display: block; 
+    }
+
+    /* ASR specific */
+    #asr .next-act {
+         margin-right: auto; /* optional padding from edge */
+        margin-left:180px;
+        display: block; 
+    }
+
 }

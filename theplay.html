@@ -256,12 +256,36 @@
       <li><a href="https://share.google/dyXysniw9f1dQ3S9Y">Frida</a></li>
       <li><a href="https://share.google/Zp52T36H33DT3GoII">Beyond Bagels</a></li>
     </ul>
-     <button class="next-act">NEXT</button>
     </div>
   </div>
 </div>
 
 <script>
+
+    // Select all acts
+  const allActs = document.querySelectorAll(".split-container");
+  let currentIndex = 0;
+
+  // Function to show only the current act
+  function showAct(index) {
+      allActs.forEach((act, i) => {
+          act.classList.toggle("active", i === index);
+      });
+  }
+
+  // Show the first act on page load
+  showAct(currentIndex);
+
+  // Next button logic
+  document.querySelectorAll(".next-act").forEach(btn => {
+      btn.addEventListener("click", () => {
+          if (currentIndex < allActs.length - 1) {
+              currentIndex++;
+              showAct(currentIndex);
+              window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top
+          }
+      });
+  });
 
   // === Tab switching logic ===
   const buttons = document.querySelectorAll("button[data-target]");
