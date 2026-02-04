@@ -167,4 +167,15 @@ a:hover {
     padding: 12px 20px;
     font-size:18px;
   }
+ h3{
+    width: 90%;          /* take up most of screen */
+    font-size: 40px;     /* smaller font on mobile */
+    text-align: flex-end;  /* optional: center instead of right */
+    margin-left: auto;   
+    margin-right: auto;
+    word-wrap: break-word; /* wrap long text */
+  }
+  .thanks{
+    text-align:flex-start;
+  }
 }
